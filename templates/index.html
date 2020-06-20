@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Diget Recognizer</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/index.js"></script>
+</head>
+
+<body>
+    <h1>Handwritten Digit Recognizer</h1>
+    <h2>NOTE: try to write on the center</h2>
+    <div class="container" id="container">
+        <canvas class="border" id="main-canvas" width="280px" height="280px"></canvas>
+        <canvas class="border" id="mnist-canvas" width="28px" height="28px"></canvas>
+        <canvas class="border" id="ans-canvas" width="280px" height="280px"></canvas>
+    </div>
+    <button id="clear">clear</button>
+    <button id="submit">submit</button>
+    <div>
+        <p>result log</p>
+        <div id="test"></div>
+    </div>
+</body>
+
+</html>

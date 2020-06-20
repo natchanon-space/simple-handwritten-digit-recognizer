@@ -1,0 +1,8 @@
+.border {
+    border: 3px solid black;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
