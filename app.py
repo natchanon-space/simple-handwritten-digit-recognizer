@@ -37,3 +37,6 @@ def index():
         return jsonify({"result": int(result), "resultArray": "{}".format(resultArray)})
     
     return render_template("index.html", accuracy=accuracy)
+
+if __name__ == '__main__':
+    app.run(threaded=True, port=5000)
