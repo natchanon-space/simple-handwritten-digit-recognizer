@@ -32,9 +32,11 @@ def index():
             resultArray, result = network.recognition(mnist, bias, weight)
         except:
             return "something wrong!!"
+
+        resultArray = resultArray.tolist() # change ndarray to list
         
         # print(result)
-        return jsonify({"result": int(result), "resultArray": "{}".format(resultArray)})
+        return jsonify({"result": int(result), "resultArray": resultArray})
     
     return render_template("index.html", accuracy=accuracy)
 

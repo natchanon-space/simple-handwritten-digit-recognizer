@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fillWhite(context, canvas);
         fillWhite(mnistCtx, mnistCan);
         fillWhite(ansCtx, ansCan);
+        document.getElementById("test").innerHTML = "";
     };
 
     // onprocess
@@ -77,8 +78,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 pic.onload = () => {
                     ansCtx.drawImage(pic, 0, 0, pic.width, pic.height, 0, 0, ansCan.width, ansCan.height);
                 };
+
+                document.getElementById("test").innerHTML = "";
                 
-                document.getElementById("test").innerHTML = res.resultArray;
+                var i;
+                for(i=0; i<10; i++){
+                    var resultLog = document.createElement("div");
+                    resultLog.id = i;
+                    resultLog.innerHTML = `"${i}": ${res.resultArray[i]}`;
+                    document.getElementById("test").appendChild(resultLog);
+                }
+
+                // document.getElementById("test").innerHTML = res.resultArray[0];
             }
             else {
                 document.getElementById("test").innerHTML = "what?"
